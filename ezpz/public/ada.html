@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>
+            Project Ezpz 
+        </title>
+        <link rel = "stylesheet" href = "style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Oswald&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class = "header">
+        <h1>
+            Problem:
+        </h1></div>
+        <br>
+        <img src = "resources/Screenshot 2021-01-16 191826.png" class = "problem-img"><Br><br><br>
+        
+       <textarea id = "inputArea" placeholder="write your text" class = "field"></textarea>
+        <br>
+        <br>
+        
+        <iframe id ="xd" class = "output">
+
+        </iframe>
+        <br>
+        <div class= "buttons">
+        <button onclick = "compile()" id = "mainBtn">RUN</button>
+        <button onclick = "screenshot()" id = "subBtn">Submit</button>
+     
+    </div>
+        <br>
+        <br>
+        <div id = "ssfield"></div>
+        <script src="html2canvas/dist/html2canvas.min.js"></script>
+        <!-- <script src="image_compare/require.js"></script> -->
+
+        <script src = "image_compare/image.js"></script>
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type = "text/javascript">
+
+        
+        function compile(){
+
+            var inputTA = document.getElementById("inputArea");
+        var xd = document.getElementById("xd").contentWindow.document;
+        xd.open();
+        xd.writeln(inputTA.value);
+        document.getElementById("xd").className ="output visible";
+   
+
+ 
+         }
+         function screenshot(){
+            var xd = document.getElementById("xd").contentWindow.document;
+    html2canvas(xd.body).then(function(canvas) {
+        document.getElementById("ssfield").innerHTML="";   
+    document.getElementById("ssfield").appendChild(canvas);
+    console.log(canvas.toDataURL("image/jpeg",0.9));
+
+
+     
+   });
+
+  }
+ 
+        </script>
+
+    </body>
+    
+</html>

@@ -1,0 +1,78 @@
+*{
+    box-sizing:border-box;
+    margin:0px;
+    padding:0px;
+    
+}
+body{
+    background-color:#214151;
+    
+     
+}
+.header{
+    text-align:center;
+    font-family: 'Kaushan Script', cursive; 
+    color:#eff7e1;
+}
+img.problem-img{
+    display:block;
+    width:680px;
+    border-radius:25px;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+}
+.field{
+  
+    display: block;
+width:70%;
+height:50%;
+margin-left:auto;
+margin-right:auto;
+
+}
+
+
+.output{
+    display:none;
+}
+.buttons{
+
+   width:60%;
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: space-between;
+}
+#mainBtn,#subBtn{
+    display:inline-block;
+    
+    font-size: 2rem;
+    padding:20px 30px 20px 30px;
+    border:0px;
+    border-radius:10px;
+    
+    background-color:#f8dc81;
+    font-family: 'Oswald', sans-serif;
+    color:#214151;
+    
+}
+
+#mainBtn:hover,#subBtn:hover{
+    background-color:#a2d0c1;
+}
+.output.visible{
+
+    display:block;
+    width:70%;
+height:50%;
+margin-left:auto;
+margin-right:auto;
+}
+#ssfield{
+    
+    text-align: center;
+}
+#sekretBandage{
+    display:none;
+}
